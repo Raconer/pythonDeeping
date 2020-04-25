@@ -26,19 +26,6 @@ class Car():
     # self 는 자바의 this와 같다. 
     # Python Method First argumets is self
     print("I Started")
- 
-class Convertible(Car):
-  
-  def __init__(self, **kwargs):
-    super().__init__(kwargs)
-    self.time = kwargs.get("time", 10)
-  
-  def take_off(self):
-    return "taking off"
-
-  # __str__ method override
-  def __str__(self):
-    return f"Car with no roof"
 
 # Function
 # def start():
@@ -67,8 +54,3 @@ ferrari.color = "Yellow"
 
 mini = Car()
 print(mini.color, mini.price)
-
-mustang = Convertible(color = "green", price="$40")
-mustang.take_off()
-mustang.wheels
-print(mustang)
